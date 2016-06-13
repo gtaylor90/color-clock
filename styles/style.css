@@ -1,0 +1,46 @@
+*{
+	box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: radial-gradient(#c0fff4 6%, gray 137%);
+}
+
+#container{
+	margin: auto;
+	position: relative;
+	/*background: radial-gradient(red 5%, yellow 15%, green 60%)*/
+}
+
+
+
+
+#txt, #txt2 {
+	text-align: center;
+	position: absolute;
+	margin-top: 30%;
+	margin-left: 42%;
+}
+
+
+
+#txt {
+	font-family: 'Lobster', cursive;
+	font-size: 360%;
+	opacity: 1;
+}
+
+#txt2 {
+	font-family: 'Patua One', cursive;
+	font-size: 360%;
+	opacity: 0;
+}
+
+
