@@ -40,6 +40,8 @@ var checkTime = function(i) {
     return i
 }
 
+
+
 var colorChange = function() {
     var today = new Date()
     var hrs = today.getHours()
@@ -53,7 +55,6 @@ var colorChange = function() {
     document.getElementById('txt2').innerHTML = "c" + red16 + ":" + green16 + ":" + blue16
     var t = setTimeout(colorChange, 500)
     // document.getElementById('body').style.background = "radial-gradient(#c0fff4 6%, #"+ red16+green16+blue16 +" 137%)"
-    
 }
 
 var singleNumber = function(i) {
