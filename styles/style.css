@@ -1,5 +1,6 @@
 *{
 	box-sizing: border-box;
+	border: solid black;
 }
 
 html {
@@ -20,9 +21,18 @@ body {
 }
 
 
+#color:hover {
+	opacity: 1;
+}
 
+#color:hover +#clock {
+	opacity: 0;
+}
+/*#txt2:hover ~ #txt {
+	opacity: 0;
+}*/
 
-#txt, #txt2 {
+#clock, #color {
 	text-align: center;
 	position: absolute;
 	margin-top: 30%;
@@ -31,16 +41,18 @@ body {
 
 
 
-#txt {
+#clock {
 	font-family: 'Lobster', cursive;
 	font-size: 360%;
-	opacity: 0;
+	opacity: 1;
+	z-index: 8;
 }
 
-#txt2 {
+#color {
 	font-family: 'Patua One', cursive;
 	font-size: 360%;
-	opacity: 1;
+	opacity: 0;
+	z-index: 10;
 }
 
 

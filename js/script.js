@@ -11,9 +11,9 @@ var yourNumber = 255
 var hexString = yourNumber.toString(16);
 console.log(hexString)
 
-var clockNode = document.querySelector("#txt")
+var clockNode = document.querySelector("#clock")
 
-var colorNode = document.querySelector("#txt2")
+var colorNode = document.querySelector("#color")
 
 // var today = new Date()
 // var hrs = today.getHours()
@@ -28,7 +28,7 @@ var startTime = function() {
     var sec = today.getSeconds()
     min = checkTime(min)
     sec = checkTime(sec)
-    document.getElementById('txt').innerHTML =
+    document.getElementById('clock').innerHTML =
         hrs + ":" + min + ":" + sec
     var t = setTimeout(startTime, 500)
 }
@@ -52,7 +52,7 @@ var colorChange = function() {
     var blue16 = sec.toString(16)
     min = checkTime(min)
     sec = checkTime(sec)
-    document.getElementById('txt2').innerHTML = "c" + red16 + ":" + green16 + ":" + blue16
+    document.getElementById('color').innerHTML = "c" + red16 + ":" + green16 + ":" + blue16
     var t = setTimeout(colorChange, 500)
     // document.getElementById('body').style.background = "radial-gradient(#c0fff4 6%, #"+ red16+green16+blue16 +" 137%)"
 }
@@ -77,4 +77,4 @@ var opacitySwap = function() {
     }
 }
 
-// clockNode.addEventListener('hover', opacitySwap)
+clockNode.addEventListener('hover', opacitySwap)
