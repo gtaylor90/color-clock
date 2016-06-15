@@ -1,58 +1,63 @@
-*{
-	box-sizing: border-box;
-	border: solid black;
+* {
+    box-sizing: border-box;
+    /*border: solid black;*/
 }
 
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: radial-gradient(#c0fff4 6%, gray 137%);
+    background: #c0fff4;
+}
+#container {
+    position: relative;
+    height: 100vh;
 }
 
-#container{
-	margin: auto;
-	position: relative;
-	/*background: radial-gradient(red 5%, yellow 15%, green 60%)*/
+#clock:hover {
+    opacity: 0;
+}
+
+#clock:hover ~ #color {
+    opacity: 1;
 }
 
 
-#color:hover {
-	opacity: 1;
-}
-
-#color:hover +#clock {
-	opacity: 0;
-}
 /*#txt2:hover ~ #txt {
 	opacity: 0;
 }*/
 
-#clock, #color {
-	text-align: center;
-	position: absolute;
-	margin-top: 30%;
-	margin-left: 42%;
+#clock,
+#color {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
 }
 
-
-
 #clock {
-	font-family: 'Lobster', cursive;
-	font-size: 360%;
-	opacity: 1;
-	z-index: 8;
+    font-family: 'Lobster', cursive;
+    font-size: 360%;
+    opacity: 1;
+    z-index: 1;
 }
 
 #color {
-	font-family: 'Patua One', cursive;
-	font-size: 360%;
-	opacity: 0;
-	z-index: 10;
+    font-family: 'Patua One', cursive;
+    font-size: 360%;
+    z-index: 0;
+    opacity: 0;
 }
 
-
+div#overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: radial-gradient(white 6%, black 137%);
+    opacity: .5;
+}
